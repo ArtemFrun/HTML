@@ -1,0 +1,77 @@
+body{
+    text-align: justify;
+    font-family: Arial, serif, sans-serif;
+    font-size: 12px;
+    background-color: antiquewhite   
+  }
+
+h1{
+    text-align: left;
+    font-size: 25px;
+    color: black;
+    font-weight: 0px;
+}
+
+h2{
+    text-align: center;
+    font-size: 25px;
+    color: rebeccapurple;
+    font-weight: 0px;   
+}
+
+.text
+{
+ padding: 0px 10px 0px 10px;
+}
+
+.img1
+{
+    padding: 0px 10px 0px 0px;  
+}
+.img2
+{
+    padding: 0px 0px 0px 10px;  
+}
+
+p{
+    font-size: 14px;
+    text-align: justify;
+    margin-left: 0px;
+}
+
+.share{
+    text-align: justify;
+    border: 1px solid limegreen;
+    width: 100%;
+    padding: 0px 0px;
+    position: relative;
+}
+
+.share a{
+    border: 1px solid red;
+    margin: 10px;
+    padding: 15px;
+    color: white;
+    background: red;
+    border-radius: 3px;
+    display:inline-block;
+    text-decoration: none;
+}
+
+.share a:hover{
+    border: 1px solid green;
+    color: yellow;
+    background: orangered;
+}
+
+.pull_guote{
+    margin: 0;
+    width: 400px;
+}
+
+
+
+ul{
+    font-size: 14px;
+    margin-left: 0px;
+}
