@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorApp1.Data;
+using BlazorApp1.Services;
+using System.Net.Http;
 
 namespace BlazorApp1
 {
@@ -29,6 +31,14 @@ namespace BlazorApp1
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<EventsForecastService>();
+
+            services.AddHttpClient<IEventsServices, EventsServices>(x =>
+            {
+                x.BaseAddress = new Uri("http://localhost:2044/api/Events/");
+            });
+
+            services.AddSingleton<HttpClient>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,6 +2,8 @@
 
 @using BlazorApp1.Data
 @inject EventsForecastService EventsService
+@inject Services.IEventsServices apiService
+
 
 @if (events != null)
 {
@@ -30,28 +32,28 @@
 
                 </div>
                 <div class="blog-photo">
-                    <img src="Events.jpg" asp-append-version="true" alt="Image"/>
+                    <img src="Events.jpg" asp-append-version="true" alt="Image" />
                 </div>
             </div>
 
-                <div class="blog-body">
-                    <div class="blog-title">
-                        <h1><a href="#">@eve.name</a></h1>
-                    </div>
-                    <div class="blog-desc">
-                        <p>@eve.description</p>
-                    </div>
-                    <div class="blog-tags">
-                        <ul>
-                            <li><a href="#">css</a></li>
-                            <li><a href="#">web design</a></li>
-                            <li><a href="#">codepen</a></li>
-                        </ul>
-                    </div>
+            <div class="blog-body">
+                <div class="blog-title">
+                    <h1><a href="#">@eve.name</a></h1>
                 </div>
-         </div>
-     }
+                <div class="blog-desc">
+                    <p>@eve.description</p>
+                </div>
+                <div class="blog-tags">
+                    <ul>
+                        <li><a href="#">css</a></li>
+                        <li><a href="#">web design</a></li>
+                        <li><a href="#">codepen</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     }
+}
 else
 {
     <p><em>Loading...</em></p>
@@ -59,10 +61,15 @@ else
 
 
 @code {
-private IEnumerable<EventsForecast> events;
+    private IEnumerable<EventsForecast> events;
 
-protected override async Task OnInitializedAsync()
-{
-    events = await EventsService.GetEvents();
-}
+    /*protected override async Task OnInitializedAsync()
+    {
+        events = await EventsService.GetEvents();
+    }*/
+
+    protected override async Task OnInitializedAsync()
+    {
+        events = await apiService.GetEvents();
+    }
 }
