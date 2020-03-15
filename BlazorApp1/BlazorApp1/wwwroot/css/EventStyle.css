@@ -87,7 +87,7 @@
 }
 
 .bloc-owner-event p {
-    background: url("/EventsHerov3.png");
+    background: url("/photo_2020-03-15_20-00-37.jpg");
     background-size: cover;
     border-radius: 50%;
     display: inline-block;
@@ -96,6 +96,47 @@
     position: relative;
     width: 50px;
 }
+
+.bloc-photo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bloc-photo-event img{
+    margin-right: 25%;
+    width: inherit;
+}
+
+.bloc-photoalbum-event
+{
+    padding:20px;
+}
+
+.bloc-photoalbum-event label{
+    margin:auto;
+    padding: 0px 0px 0px 25%;
+    font-size: x-large;
+    font-style:italic;
+}
+
+.bloc-photoalbum-event img {
+    width: 100px;
+    height: 100px;
+}
+
+.bloc-photoalbum-event ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    overflow: hidden;
+    padding: 16px 3px 7px 3px;
+}
+
+.bloc-photoalbum-event li {
+    padding: 5px 5px 5px 5px;
+    }
 
 .bloc-body-event {
     width: 80%;
