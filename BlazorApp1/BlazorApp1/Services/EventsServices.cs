@@ -25,5 +25,10 @@ namespace BlazorApp1.Services
             return await JsonSerializer.DeserializeAsync<List<EventsForecast>>(responseContent);
 
         }
+
+        public Task<EventsForecast> GetEventById()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -9,5 +9,7 @@ namespace BlazorApp1.Services
     interface IEventsServices
     {
         public Task<IEnumerable<EventsForecast>> GetEvents();
+
+        public Task<EventsForecast> GetEventById();
     }
 }

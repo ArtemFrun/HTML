@@ -1,0 +1,67 @@
+﻿@page "/EventDetalies/{name}"
+@page "/EventDetalies"
+
+@using BlazorApp1.Data
+@inject EventsForecastService EventsService
+
+@if (eve != null)
+{
+    <div class="bloc-container-event">
+        <div class="bloc-header-event">
+            <div class="bloc-owner-event">
+                <ul>
+                    <p class="owner-photo"></p>
+                    <li>
+                        <b>Автор:</b>
+                        @eve.owner
+                    </li>
+                    <li>
+                        <b>Категория:</b>
+                        @eve.category
+                    </li>
+                    <li>
+                        <b>Место проведения:</b>
+                        @eve.location
+                    </li>
+                </ul>
+            </div>
+            <div class="bloc-photo-event">
+                <img src="Events.jpg" asp-append-version="true" alt="Image" />
+            </div>
+        </div>
+        <div class="bloc-body-event">
+            <div class="bloc-titel-event">
+                <h1>@eve.name</h1>
+            </div>
+            <div class="bloc-desc-event">
+                <p>@eve.description</p>
+            </div>
+
+            <div class="bloc-button-event">
+                <ul>
+                    <li>
+                        <p><a class="btn-warning">Подписатся на событие</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <p><em>Loading...</em></p>
+}
+
+
+@code {
+
+    [Parameter]
+    public string name { get; set; }
+
+    private EventsForecast eve;
+
+    protected override async Task OnInitializedAsync()
+    {
+        eve = await EventsService.GetEvent(name);
+    }
+}

@@ -1,12 +1,30 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="sidebar">
+@*<div class="sidebar">
     <NavMenu />
-</div>
+</div>*@
 
 <div class="main">
-    <div class="top-row px-4">
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+    <div>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Events</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Главная </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AllEvents">Все События</a>
+                        </li>
+                    </ul>
+                   <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/SingIn">Sing in</a>
+                </div>
+            </nav>
+        </header>
     </div>
 
     <div class="content px-4">

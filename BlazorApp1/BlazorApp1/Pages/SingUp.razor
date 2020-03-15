@@ -1,0 +1,43 @@
+﻿@page "/Register"
+@using BlazorApp1.Data
+@inject Services.IUserRegister apiService
+
+<body>
+    <div class="reg-forms">
+        <form action="/Register" class="form-signup">
+            <div class="social-login">
+                <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
+            </div>
+            <div class="social-login">
+                <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
+            </div>
+
+            <p style="text-align:center">OR</p>
+
+            <input type="text" id="user-name" class="form-control" @bind="user.NickName" placeholder="Nickname">
+            <input type="email" id="user-email" class="form-control" @bind="user.email" placeholder="Email address">
+            <input type="password" id="user-pass" class="form-control" @bind="user.password" placeholder="Password">
+            <input type="password" id="user-repeatpass" class="form-control" @bind="user.passwordConfirm" placeholder="Repeat Password">
+
+            <button class="form-control btn btn-primary btn-block" type="submit" @onclick="Register">Sign Up</button>
+
+            <a href="/SingIn" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+        </form>
+    </div>
+</body>
+
+@code
+ {
+    private User user;
+
+    protected override Task OnInitializedAsync()
+    {
+        user = new User();
+        return base.OnInitializedAsync();
+    }
+
+    private async Task Register()
+    {
+        await apiService.Create(user);
+    }
+}

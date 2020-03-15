@@ -36,7 +36,10 @@ namespace BlazorApp1
             {
                 x.BaseAddress = new Uri("http://localhost:2044/api/Events/");
             });
-
+            services.AddHttpClient<IUserRegister, UserRegister>(x =>
+            {
+                x.BaseAddress = new Uri("http://localhost:2044/api/User/");
+            });
             services.AddSingleton<HttpClient>();
 
         }
@@ -59,6 +62,8 @@ namespace BlazorApp1
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

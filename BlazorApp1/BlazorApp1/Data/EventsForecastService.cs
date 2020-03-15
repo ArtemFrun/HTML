@@ -19,5 +19,10 @@ namespace BlazorApp1.Data
         {
             return events;
         }
+
+        public async Task<EventsForecast> GetEvent(string name)
+        {
+            return events.FirstOrDefault(e => e.name == name);
+        }
     } 
 }

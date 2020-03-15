@@ -38,7 +38,7 @@
 
             <div class="blog-body">
                 <div class="blog-title">
-                    <h1><a href="#">@eve.name</a></h1>
+                    <h1><a href="/EventDetalies">@eve.name</a></h1>
                 </div>
                 <div class="blog-desc">
                     <p>@eve.description</p>
@@ -63,13 +63,13 @@ else
 @code {
     private IEnumerable<EventsForecast> events;
 
-    /*protected override async Task OnInitializedAsync()
-    {
-        events = await EventsService.GetEvents();
-    }*/
-
     protected override async Task OnInitializedAsync()
     {
-        events = await apiService.GetEvents();
+        events = await EventsService.GetEvents();
     }
+    /*
+     protected override async Task OnInitializedAsync()
+    {
+        events = await apiService.GetEvents();
+    }*/
 }

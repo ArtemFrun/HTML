@@ -1,0 +1,102 @@
+﻿@page "/AllEvents"
+
+@using BlazorApp1.Data
+@inject EventsForecastService EventsService
+@inject Services.IEventsServices apiService
+
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+            <h3 for="inputFilter">Фильтрация</h3>
+            <div class="input-group-date">
+                <label for="inputDate">Фильтрация по дате:</label>
+                <ul>
+                    <li>
+                        <label for="inputDateFrom">Начальная дата:</label>
+                        <input type="date" class="form-control" placeholder="">
+                    </li>
+                    <li>
+                        <label for="inputDateTo">Конечная дата:</label>
+                        <input type="date" class="form-control" placeholder="">
+                    </li>
+                </ul>
+            </div>
+            <div class="input-group-name">
+                <label for="inputName">Поиск по названию:</label>
+                <input type="text" class="form-control" placeholder="Введите название">
+            </div>
+            <button class="btn-danger">Поиск</button>
+        </div>
+
+        <div class="col-sm-9">
+            @if (events != null)
+            {
+                @foreach (var eve in events)
+                {
+                    <div class="blog-container blog-container-allevents mt-4">
+
+                        <div class="blog-header">
+                            <div class="blog-cover">
+                                <div class="blog-owner">
+                                    <ul>
+                                        <li>
+                                            <b>Автор:</b>
+                                            @eve.owner
+                                        </li>
+                                        <li>
+                                            <b>Категория:</b>
+                                            @eve.category
+                                        </li>
+                                        <li>
+                                            <b>Место проведения:</b>
+                                            @eve.location
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="blog-photo">
+                                <img src="Events.jpg" asp-append-version="true" alt="Image" />
+                            </div>
+                        </div>
+
+                        <div class="blog-body">
+                            <div class="blog-title">
+                                <h1><a href=@string.Format("/EventDetalies/{0}", @eve.name)>@eve.name</a></h1>
+                            </div>
+                            <div class="blog-desc">
+                                <p>@eve.description</p>
+                            </div>
+                            <div class="blog-tags">
+                                <ul>
+                                    <li><a href="#">css</a></li>
+                                    <li><a href="#">web design</a></li>
+                                    <li><a href="#">codepen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p><em>Loading...</em></p>
+            }
+            </div>
+        </div>
+    </div>
+
+@code {
+    private IEnumerable<EventsForecast> events;
+
+    protected override async Task OnInitializedAsync()
+    {
+        events = await EventsService.GetEvents();
+    }
+
+    /* protected override async Task OnInitializedAsync()
+     {
+         events = await apiService.GetEvents();
+     }*/
+}
