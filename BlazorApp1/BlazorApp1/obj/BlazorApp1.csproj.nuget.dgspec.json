@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tjomka777tjomka777\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj": {}
+    "C:\\Users\\Group-bbv182\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tjomka777tjomka777\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj": {
+    "C:\\Users\\Group-bbv182\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tjomka777tjomka777\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Group-bbv182\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
         "projectName": "BlazorApp1",
-        "projectPath": "C:\\Users\\tjomka777tjomka777\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
-        "packagesPath": "C:\\Users\\tjomka777tjomka777\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tjomka777tjomka777\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\obj\\",
+        "projectPath": "C:\\Users\\Group-bbv182\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
+        "packagesPath": "C:\\Users\\Group-bbv182\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Group-bbv182\\Documents\\GitHub\\HTML\\BlazorApp1\\BlazorApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\tjomka777tjomka777\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Group-bbv182\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

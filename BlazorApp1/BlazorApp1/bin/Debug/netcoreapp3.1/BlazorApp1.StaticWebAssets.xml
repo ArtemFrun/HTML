@@ -1,4 +1,4 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/BlazorStrap" Path="C:\Users\tjomka777tjomka777\.nuget\packages\blazorstrap\1.2.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/MatBlazor" Path="C:\Users\tjomka777tjomka777\.nuget\packages\matblazor\2.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorStrap" Path="C:\Users\Group-bbv182\.nuget\packages\blazorstrap\1.2.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/MatBlazor" Path="C:\Users\Group-bbv182\.nuget\packages\matblazor\2.2.0\build\..\staticwebassets\" />
 </StaticWebAssets>

@@ -81,14 +81,17 @@
                 <div class="bloc-desc-event">
                     <p>@eve.description</p>
                 </div>
-
-                <div class="bloc-button-event">
-                    <ul>
-                        <li>
-                            <p><a class="btn-warning">Подписатся на событие</a></p>
-                        </li>
-                    </ul>
-                </div>
+                <AuthorizeView>
+                    <Authorized>
+                        <div class="bloc-button-event">
+                            <ul>
+                                <li>
+                                    <p><a class="btn-warning">Подписатся на событие</a></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </Authorized>
+                </AuthorizeView>
             </div>
         </div>
 }
