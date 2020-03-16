@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using BlazorApp1.Data;
 using BlazorApp1.Services;
 using System.Net.Http;
+using Microsoft.AspNetCore.Components.Authorization;
+using Blazored.LocalStorage;
 
 namespace BlazorApp1
 {
@@ -31,6 +33,10 @@ namespace BlazorApp1
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<EventsForecastService>();
+
+            services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
+            services.AddBlazoredLocalStorage();
+
 
             services.AddHttpClient<IEventsServices, EventsServices>(x =>
             {

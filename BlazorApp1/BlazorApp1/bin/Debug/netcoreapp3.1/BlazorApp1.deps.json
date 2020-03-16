@@ -25,6 +25,7 @@
       "BlazorApp1/1.0.0": {
         "dependencies": {
           "BlazorStrap": "1.2.0",
+          "Blazored.LocalStorage": "2.1.1",
           "MatBlazor": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -318,6 +319,21 @@
         },
         "compile": {
           "lib/netstandard2.0/BlazorComponentUtilities.dll": {}
+        }
+      },
+      "Blazored.LocalStorage/2.1.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.2",
+          "Microsoft.AspNetCore.Components.Web": "3.1.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Blazored.LocalStorage.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Blazored.LocalStorage.dll": {}
         }
       },
       "BlazorStrap/1.2.0": {
@@ -3372,6 +3388,13 @@
       "sha512": "sha512-lMs6tJpkgYWmze2+hEp0Kg4VeIuZPkS6ekt7k+18tE+4iMAy3xlgM5XJw1fzOZjpYQj3X9rex6T3Eoij52tyXw==",
       "path": "blazorcomponentutilities/1.6.0",
       "hashPath": "blazorcomponentutilities.1.6.0.nupkg.sha512"
+    },
+    "Blazored.LocalStorage/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C3hls1girWezQy2eVRlngB2gx6CzDn0iWgdgSoa7W6pRf4nK6HOI3MtaWmdNCJQ/bniICIHs+CYvaXqmKx/oLw==",
+      "path": "blazored.localstorage/2.1.1",
+      "hashPath": "blazored.localstorage.2.1.1.nupkg.sha512"
     },
     "BlazorStrap/1.2.0": {
       "type": "package",

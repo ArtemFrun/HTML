@@ -4,6 +4,7 @@
 @using BlazorApp1.Data
 @inject EventsForecastService EventsService
 
+
 @if (eve != null)
 {
     <div class="bloc-container-event">
@@ -72,28 +73,28 @@
                         </ul>
                     </div>
                 </div>
-                </div>
-            </div>
-            <div class="bloc-body-event">
-                <div class="bloc-titel-event">
-                    <h1>@eve.name</h1>
-                </div>
-                <div class="bloc-desc-event">
-                    <p>@eve.description</p>
-                </div>
-                <AuthorizeView>
-                    <Authorized>
-                        <div class="bloc-button-event">
-                            <ul>
-                                <li>
-                                    <p><a class="btn-warning">Подписатся на событие</a></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </Authorized>
-                </AuthorizeView>
             </div>
         </div>
+        <div class="bloc-body-event">
+            <div class="bloc-titel-event">
+                <h1>@eve.name</h1>
+            </div>
+            <div class="bloc-desc-event">
+                <p>@eve.description</p>
+            </div>
+            <AuthorizeView>
+                <Authorized>
+                    <div class="bloc-button-event">
+                        <ul>
+                            <li>
+                                <p><a class="btn-warning">Подписатся на событие</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </Authorized>
+            </AuthorizeView>
+        </div>
+    </div>
 }
 else
 {

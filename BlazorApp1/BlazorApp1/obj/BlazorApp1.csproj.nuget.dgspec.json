@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[1.2.0, )"
             },
+            "Blazored.LocalStorage": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
             "MatBlazor": {
               "target": "Package",
               "version": "[2.2.0, )"
